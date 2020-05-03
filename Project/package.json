@@ -1,0 +1,29 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "my first implementation of automation testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MariaIliukha/JS-project-in-TestCafe.git"
+  },
+  "keywords": [
+    "javascript",
+    "TestCafe",
+    "Automation",
+    "testing"
+  ],
+  "author": "Maria Iliukha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MariaIliukha/JS-project-in-TestCafe/issues"
+  },
+  "homepage": "https://github.com/MariaIliukha/JS-project-in-TestCafe#readme",
+  "dependencies": {
+    "faker": "^4.1.0",
+    "testcafe": "^1.8.4"
+  }
+}
