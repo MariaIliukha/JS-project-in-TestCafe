@@ -4,7 +4,7 @@
   "description": "my first implementation of automation testing",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "testcafe chrome ./src/tests/test.js"
   },
   "repository": {
     "type": "git",
