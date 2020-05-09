@@ -1,26 +1,33 @@
 const BasePage = require('../pages/basePage').default;
 import { baseUrl } from '../pages/basePage';
-import { t } from 'testcafe';
+import { t, Selector } from 'testcafe';
 
 class RegisterPage extends BasePage {
     constructor() {
         super();
     }
-    url = `${baseUrl}/account/register`;
-    firstName = 'input[id="first_name"]';
-    lastName = 'input[id="last_name"]';
-    email = 'input[id="email"]';
-    password = 'input[id="password"]';
-    acceptCheckBox = 'input[id="customer[accepts_marketing]"]';
-    signUpBtn = 'input[value="Sign Up"]';
+    url = `${baseUrl}create_account`;
+    firstName = 'input[name="firstname"]';
+    lastName = 'input[name="lastname"]';
+    country = 'select[class="form-control"][name="country_code"]';
+    email = '[name="customer_form"] [name="email"]';
+    password = '[name="customer_form"] [name="password"]';
+    confirmedPassword = '[name="customer_form"] [name="confirmed_password"]';
+    checkBoxNewsLetter = 'input[name="newsletter"]';
+    createAccountBtn = '[name="create_account"]';
 
     async registerUser(userData) {
         await t.typeText(this.firstName, userData.firstName);
         await t.typeText(this.lastName, userData.lastName);
+        await t
+            .click(this.country)
+            .click(Selector('option').withAttribute('value', userData.countryCode));
         await t.typeText(this.email, userData.email);
         await t.typeText(this.password, userData.password);
-        await t.click(this.acceptCheckBox);
-        await t.click(this.signUpBtn);
+        await t.typeText(this.confirmedPassword, userData.confirmPassword);
+        await t.click(this.checkBoxNewsLetter);
+        await t.click(this.createAccountBtn);
+
     }
 
     async getTheChallengePage() {

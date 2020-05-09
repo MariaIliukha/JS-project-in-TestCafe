@@ -4,7 +4,7 @@
   "description": "my first implementation of automation testing",
   "main": "index.js",
   "scripts": {
-    "test": "testcafe chrome ./src/tests/test.js"
+    "test": "testcafe chrome ./src/tests/registration.js"
   },
   "repository": {
     "type": "git",
