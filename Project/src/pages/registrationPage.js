@@ -29,4 +29,5 @@ class RegisterPage extends BasePage {
     }
 }
 
+
 export default new RegisterPage();
