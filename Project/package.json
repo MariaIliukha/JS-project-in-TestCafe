@@ -24,6 +24,6 @@
   "homepage": "https://github.com/MariaIliukha/JS-project-in-TestCafe#readme",
   "dependencies": {
     "faker": "^4.1.0",
-    "testcafe": "^1.8.4"
+    "testcafe": "^1.20.1"
   }
 }
